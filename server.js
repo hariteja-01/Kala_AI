@@ -13,10 +13,10 @@ console.log('=====================================');
 
 // Get port from environment (Render sets PORT automatically)
 const PORT = process.env.PORT || 3000;
-const BACKEND_PORT = process.env.BACKEND_PORT || 8000;
+const BACKEND_PORT = 8000; // Internal backend port
 
-// Start backend Python server
-console.log(`🐍 Starting Python backend on port ${BACKEND_PORT}...`);
+// Start backend Python server on internal port
+console.log(`🐍 Starting Python backend on internal port ${BACKEND_PORT}...`);
 const backend = spawn('python', ['main.py'], {
   cwd: path.join(__dirname, 'backend'),
   stdio: 'inherit',
@@ -28,14 +28,14 @@ const backend = spawn('python', ['main.py'], {
 
 // Wait a moment for backend to start
 setTimeout(() => {
-  // Start Next.js frontend
+  // Start Next.js frontend on main port
   console.log(`🎭 Starting Next.js frontend on port ${PORT}...`);
   const frontend = spawn('npm', ['start'], {
     stdio: 'inherit',
     env: {
       ...process.env,
       PORT: PORT,
-      NEXT_PUBLIC_BACKEND_URL: `http://localhost:${BACKEND_PORT}`
+      BACKEND_URL: `http://localhost:${BACKEND_PORT}`
     }
   });
 
@@ -63,4 +63,4 @@ backend.on('error', (err) => {
 
 console.log('✅ Kala-AI servers starting...');
 console.log(`🌐 Frontend will be available on port ${PORT}`);
-console.log(`🔗 Backend API will be available on port ${BACKEND_PORT}`);
+console.log(`🔗 Backend API available internally on port ${BACKEND_PORT}`);

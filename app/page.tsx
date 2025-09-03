@@ -23,10 +23,8 @@ export default function Home() {
       const formData = new FormData();
       formData.append('file', file);
       
-      // Use relative path in production for Render compatibility
-      const apiUrl = process.env.NODE_ENV === 'production'
-        ? '/analyze'
-        : `${process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'}/analyze`;
+      // Use Next.js API route for backend communication
+      const apiUrl = '/api/analyze';
       const response = await fetch(apiUrl, {
         method: 'POST',
         body: formData,
