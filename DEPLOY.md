@@ -91,8 +91,8 @@ npm run build:production
 ## ✅ Deployment Success
 
 Your app will be available at:
-- **Frontend:** `https://your-app-name.onrender.com`
-- **Backend API:** `https://your-app-name.onrender.com:8000`
+- **Frontend:** `https://kala-ai-fullstack.onrender.com`
+- **Backend API:** `https://kala-ai-fullstack.onrender.com:8000`
 
 The unified server handles routing between frontend and backend automatically!
 

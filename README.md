@@ -13,7 +13,7 @@
 
 *🇮🇳 **भारतीय कारीगरों की शक्ति** - Transform your heritage craft into a market-ready digital empire*
 
-[🚀 **Live Demo**](https://kala-ai.render.com) • [📖 **Documentation**](https://docs.kala-ai.dev) • [🎯 **Getting Started**](#-quick-start) • [🤝 **Contribute**](#-contributing)
+[🚀 **Live Demo**](https://kala-ai-fullstack.onrender.com) • [📖 **Documentation**](https://github.com/hariteja-01/Kala_AI#readme) • [🎯 **Getting Started**](#-quick-start) • [🤝 **Contribute**](#-contributing)
 
 </div>
 
@@ -142,8 +142,8 @@ graph TB
 
 ```powershell
 # 1️⃣ Clone the repository
-git clone https://github.com/your-username/kala-ai.git
-cd kala-ai
+git clone https://github.com/hariteja-01/Kala_AI.git
+cd Kala_AI
 
 # 2️⃣ Set up environment securely
 .\setup-env.bat
@@ -171,7 +171,7 @@ cd ..
 
 ```bash
 # 1️⃣ Clone & Setup
-git clone https://github.com/your-username/kala-ai.git && cd kala-ai
+git clone https://github.com/hariteja-01/Kala_AI.git && cd Kala_AI
 
 # 2️⃣ Install dependencies
 npm install && cd backend && pip install -r requirements.txt && cd ..
@@ -489,8 +489,8 @@ We welcome contributors who share our passion for preserving Indian artisan heri
 
 ```bash
 # 1️⃣ Fork & Clone
-git clone https://github.com/YOUR_USERNAME/kala-ai.git
-cd kala-ai
+git clone https://github.com/hariteja-01/Kala_AI.git
+cd Kala_AI
 
 # 2️⃣ Create Feature Branch
 git checkout -b feature/amazing-cultural-feature
@@ -559,7 +559,7 @@ This project is open-source under the MIT License - see [LICENSE](LICENSE) for d
 
 ## 🌟 **Join the Cultural Revolution**
 
-[![GitHub Stars](https://img.shields.io/github/stars/your-username/kala-ai?style=social)](https://github.com/your-username/kala-ai/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/hariteja-01/Kala_AI?style=social)](https://github.com/hariteja-01/Kala_AI/stargazers)
 [![Twitter Follow](https://img.shields.io/twitter/follow/KalaAI_Official?style=social)](https://twitter.com/KalaAI_Official)
 [![Discord Community](https://img.shields.io/discord/123456789?style=social&logo=discord)](https://discord.gg/kala-ai)
 
@@ -569,6 +569,6 @@ This project is open-source under the MIT License - see [LICENSE](LICENSE) for d
 
 ---
 
-**Ready to transform Indian craftsmanship? [🚀 **Start Building**](#-lightning-fast-setup)**
+**Ready to transform Indian craftsmanship? [🚀 **Start Building**](#-lightning-fast-setup) | [📋 **View Repository**](https://github.com/hariteja-01/Kala_AI) | [🌐 **Deploy Now**](https://render.com)**
 
 </div>
