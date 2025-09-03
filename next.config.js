@@ -5,10 +5,7 @@ const nextConfig = {
   },
   images: { unoptimized: true },
   env: {
-    NEXT_PUBLIC_BACKEND_URL: process.env.NEXT_PUBLIC_BACKEND_URL || 
-                            (process.env.NODE_ENV === 'production' 
-                              ? `http://localhost:${process.env.BACKEND_PORT || 8000}`
-                              : 'http://localhost:8000'),
+    NEXT_PUBLIC_BACKEND_URL: process.env.NEXT_PUBLIC_BACKEND_URL || '',
   },
   // Ensure standalone output for production
   output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
