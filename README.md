@@ -309,6 +309,8 @@ git push
 
 ## 🌐 **Deployment Options**
 
+> 📖 **For complete, step-by-step deployment instructions with environment variables setup, see our [Complete Render Deployment Guide](./RENDER-DEPLOYMENT-GUIDE.md)**
+
 ### 🚀 **One-Click Render Deployment (Recommended)**
 
 **Render automatically detects and deploys your app with a single service!**
