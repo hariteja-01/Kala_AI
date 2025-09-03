@@ -4,7 +4,7 @@ services:
   - type: web
     name: kala-ai-fullstack
     env: node
-    buildCommand: npm install && npm run build && cd backend && pip install -r requirements.txt
+    buildCommand: npm install && npm run build && cd backend && pip install --upgrade pip && pip install -r requirements.txt
     startCommand: node server.js
     envVars:
       - key: GEMINI_API_KEY
