@@ -20,7 +20,7 @@
     "type-check": "tsc --noEmit",
     "setup": "npm install && npm run prepare",
     "prepare": "husky install || true",
-    "deploy:build": "npm ci --omit=dev && npm run build && cd backend && pip install -r requirements.txt",
+    "deploy:build": "npm ci && npm run build && cd backend && pip install -r requirements.txt",
     "deploy:start": "node server.js",
     "start:production": "node server.js",
     "build:production": "npm run deploy:build"
@@ -60,6 +60,7 @@
     "@types/node": "20.6.2",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
+    "@types/react-dropzone": "^5.1.0",
     "@types/three": "^0.158.3",
     "autoprefixer": "10.4.15",
     "class-variance-authority": "^0.7.0",
@@ -92,7 +93,6 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/react-dropzone": "^5.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "husky": "^8.0.3",
