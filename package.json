@@ -19,8 +19,8 @@
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
     "setup": "npm install && npm run prepare",
-    "prepare": "husky install",
-    "deploy:build": "npm install && npm run build && cd backend && pip install -r requirements.txt",
+    "prepare": "husky install || true",
+    "deploy:build": "npm ci --omit=dev && npm run build && cd backend && pip install -r requirements.txt",
     "deploy:start": "node server.js",
     "start:production": "node server.js",
     "build:production": "npm run deploy:build"
