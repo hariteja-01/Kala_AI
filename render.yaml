@@ -1,0 +1,18 @@
+# Kala-AI Unified Render Configuration
+services:
+  # Unified Full-Stack Service
+  - type: web
+    name: kala-ai-fullstack
+    env: node
+    buildCommand: npm run build:production
+    startCommand: npm run start:production
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false  # You'll add this manually in Render dashboard
+      - key: NODE_ENV
+        value: production
+      - key: BACKEND_PORT
+        value: 8000
+    region: oregon
+    plan: starter
+    healthCheckPath: /health

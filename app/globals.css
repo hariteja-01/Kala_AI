@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+:root {
+  /* Indian Heritage Color Palette */
+  --saffron: #FF9933;
+  --white: #FFFFFF;
+  --green: #138808;
+  --navy: #000080;
+  --gold: #FFD700;
+  --terracotta: #E2725B;
+  --indigo: #4B0082;
+  --vermillion: #E34234;
+  
+  /* Extended Palette */
+  --saffron-50: #FFF7ED;
+  --saffron-100: #FFEDD5;
+  --saffron-200: #FED7AA;
+  --saffron-300: #FDBA74;
+  --saffron-400: #FB923C;
+  --saffron-500: #F97316;
+  --saffron-600: #EA580C;
+  --saffron-700: #C2410C;
+  --saffron-800: #9A3412;
+  --saffron-900: #7C2D12;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 25 95% 53%;
+    --radius: 0.75rem;
+  }
+  
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 0 0% 95%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 25 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), serif;
+  }
+}
+
+/* Custom glassmorphism utilities */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glass-orange {
+    background: rgba(255, 153, 51, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 153, 51, 0.2);
+  }
+  
+  .heritage-gradient {
+    background: linear-gradient(135deg, #FF9933 0%, #FFD700 50%, #138808 100%);
+  }
+  
+  .mandala-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255, 153, 51, 0.1) 0%, transparent 25%),
+      radial-gradient(circle at 75% 75%, rgba(255, 215, 0, 0.1) 0%, transparent 25%),
+      radial-gradient(circle at 75% 25%, rgba(19, 136, 8, 0.1) 0%, transparent 25%),
+      radial-gradient(circle at 25% 75%, rgba(75, 0, 130, 0.1) 0%, transparent 25%);
+  }
+}
+
+/* Animation classes */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, 
+             transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 153, 51, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #FF9933, #FFD700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #E8841C, #E6C200);
+}
